@@ -8,8 +8,8 @@ path='train (1).csv'
 t=pd.read_csv(path)
 t
 
-st.table(t.info())
-
 st.table(t.head())
 
 st.table(t.tail())
+
+st.table(t.describe())
