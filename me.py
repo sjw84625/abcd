@@ -4,7 +4,8 @@ import numpy as np
 
 st.title("신정우's profile")
 
-st.metric(label="나이",value="중1",daba="14")
+
+st.metric(label="나이",value="중1",data="14")
 
 path='train (1).csv'
 t=pd.read_csv(path)
