@@ -42,3 +42,6 @@ with tab2:
   st.header("승선 항구에 따른 생존 비율")
   st.table(t.groupby(['Embarked','Survived'])['PassengerId'].count())
   st.bar_chart(x='Embarked',y='Survived',data=t)
+
+  st.header("산점도 차트")
+  st.table(t['Age'].describe())
