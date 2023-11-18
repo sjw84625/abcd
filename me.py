@@ -13,8 +13,8 @@ with tab2:
   t=pd.read_csv(path)
   t
   col1,col2,col3=st.columns(3)
-  col1.metric(st.table(t.head()))
+  col1.table(t.head())
   
-  col2.metric(st.table(t.tail()))
+  col2.table(t.tail())
   
-  col2.metric(st.table(t.describe()))
+  col2.table(t.describe())
