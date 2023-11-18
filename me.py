@@ -47,12 +47,24 @@ with tab2:
   st.table(t['Age'].describe())
   st.scatter_chart(x='Age',y='PassengerId',data=t)
 
-  st.header("바이올린 차트")
-  st.violin_chart(x='Survived',y='Age',data=t)
-  st.violin_chart(x='Survived',y='Age',hue='Sex',data=t)
-  st.violin_chart(x='Survived',y='Age',hue='Sex',data=t,split=True)
+  # st.header("바이올린 차트")
+  # st.violin_chart(x='Survived',y='Age',data=t)
+  # st.violin_chart(x='Survived',y='Age',hue='Sex',data=t)
+  # st.violin_chart(x='Survived',y='Age',hue='Sex',data=t,split=True)
 
-  st.header("히트맵")
-  table=t.pivot_table(index=['Sex'],columns=['Pclass'],aggfunc='size')
-  st.heatmap(table,annot=True,fmt='d',cmap='rainbow')
-  st.table(t.corr())
+  # st.header("히트맵")
+  # table=t.pivot_table(index=['Sex'],columns=['Pclass'],aggfunc='size')
+  # st.heatmap(table,annot=True,fmt='d',cmap='rainbow')
+  # st.table(t.corr())
+
+  st.header("티켓 등급별 평균 요금")
+  t.groupby(['Pclass'])['Fare'].count()
+
+  st.header("가장 나이가 많은 사람")
+  t['Age'].max()
+
+  st.header("승선한 항구에 따른 평균요금")
+  st.table(t.groupby(['Embarked'])['Fare'].count())
+
+  st.header("어떤 항구에서 탑승한 여성의 생존확률이 가장 높을까?")
+  st.bar_chart(x='Embarked',y='Survived',data=t,hue='Sex')
