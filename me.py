@@ -67,4 +67,4 @@ with tab2:
   st.table(t.groupby(['Embarked'])['Fare'].count())
 
   st.header("어떤 항구에서 탑승한 여성의 생존확률이 가장 높을까?")
-  st.bar_chart(x='Embarked',y='Survived',data=t,hue='Sex')
+  #st.bar_chart(x='Embarked',y='Survived',data=t,hue='Sex')
