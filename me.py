@@ -1,18 +1,21 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-
+#sns.barplot(x='Sex',y='Survived',data=t) -> st.bar_chart(x='Sex',y='Survived',data=t)
+#sns.barplot(x='Pclass',y='Survived',data=t,hue='Sex') -> st.bar_chart(x='Pclass',y='Survived',data=t,color='Sex')
 st.title("신정우's profile")
 
 tab1,tab2=st.tabs(["About Me","Projects"])
 with tab1:
-  st.metric(label="나이",value="중1",delta="14")
+  col1,col2,col3=st.columns(3)
+  col1.metric(label="나이",value="중1",delta="14")
+  col2.metric(label="학교",value="구암중학교",delta="구암초등학교")
+  col3.metric(label="희망 전공",value="컴퓨터 공학과",delta="kaist")
 with tab2:
   st.header("titanic data analysis")
   path='train (1).csv'
   t=pd.read_csv(path)
   t
-  #col1,col2,col3,col4=st.columns(4)
   st.table(t.head())
   
   st.table(t.tail())
