@@ -21,4 +21,4 @@ with tab2:
 
   st.table(t.isna().sum())
 
-  st.teader(t['Age'].mean())
+  t['Age'].mean()
