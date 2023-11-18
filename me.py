@@ -45,3 +45,4 @@ with tab2:
 
   st.header("산점도 차트")
   st.table(t['Age'].describe())
+  st.scatter_chart(x='Age',y='PassengerId',data=t)
