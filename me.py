@@ -27,6 +27,8 @@ with tab2:
   # t['Embarked'].fillna('S',inplace=True)
   # st.table(t.isna().sum())
 
+  st.header("여성과 남성의 비율")
   st.table(t.groupby(['Sex'])['PassengerId'].count())
 
+  st.header("생존 여성과 남성의 비율")
   st.table(t.groupby(['Sex','Survived'])['PassengerId'].count())
