@@ -21,4 +21,7 @@ with tab2:
 
   st.table(t.isna().sum())
 
-  t['Age'].mean()
+  st.table(t.groupby('Embarked').count())
+
+  t['Embarked'].fillna('S',inplace=True)
+  st.table(t.isna().sum())
