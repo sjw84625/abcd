@@ -58,10 +58,10 @@ with tab2:
   # st.table(t.corr())
 
   st.header("티켓 등급별 평균 요금")
-  t.groupby(['Pclass'])['Fare'].count()
+  st.table(t.groupby(['Pclass'])['Fare'].count())
 
   st.header("가장 나이가 많은 사람")
-  t['Age'].max()
+  st.write(t['Age'].max())
 
   st.header("승선한 항구에 따른 평균요금")
   st.table(t.groupby(['Embarked'])['Fare'].count())
