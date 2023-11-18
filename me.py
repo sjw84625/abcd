@@ -28,3 +28,5 @@ with tab2:
   # st.table(t.isna().sum())
 
   st.table(t.groupby(['Sex'])['PassengerId'].count())
+
+  st.table(t.groupby(['Sex','Survived'])['PassengerId'].count())
