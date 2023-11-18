@@ -7,10 +7,10 @@ st.title("신정우's profile")
 
 tab1,tab2=st.tabs(["About Me","Projects"])
 with tab1:
+  st.metric(label="나이",value="중1",delta="14")
   col1,col2,col3=st.columns(3)
-  col1.metric(label="나이",value="중1",delta="14")
-  col2.metric(label="학교",value="구암중학교",delta="구암초등학교")
-  col3.metric(label="희망 전공",value="컴퓨터공학과",delta="kaist")
+  col1.metric(label="학교",value="구암중학교",delta="구암초등학교")
+  col2.metric(label="희망 전공",value="컴퓨터공학과",delta="kaist")
 with tab2:
   st.header("titanic data analysis")
   path='train (1).csv'
