@@ -64,6 +64,7 @@ with tab2:
   st.write(t['Age'].max())
 
   st.header("승선한 항구에 따른 평균요금")
+  st.write("Cherbourg, Queenstown, Southampton")
   st.table(t.groupby(['Embarked'])['Fare'].count())
 
   st.header("어떤 항구에서 탑승한 여성의 생존확률이 가장 높을까?")
