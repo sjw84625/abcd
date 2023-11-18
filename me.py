@@ -37,3 +37,4 @@ with tab2:
 
   st.header("객실 등급에 따른 생존 비율")
   st.table(t.groupby(['Pclass','Survived'])['PassengerId'].count())
+  st.bar_chart(x='Pclass',y='Survived',data=t,hue='Sex')
