@@ -12,10 +12,10 @@ with tab2:
   path='train (1).csv'
   t=pd.read_csv(path)
   t
-  col1,col2,col3,col4=st.columns(4)
-  col1.table(t.head())
+  //col1,col2,col3,col4=st.columns(4)
+  st.table(t.head())
   
-  col2.table(t.tail())
+  st.table(t.tail())
   
-  col3.table(t.describe())
-  col4.table(t.isna())
+  st.table(t.describe())
+  st.table(t.isna())
