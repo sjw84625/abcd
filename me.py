@@ -27,3 +27,5 @@ with tab2:
   t['Embarked'].unique()
   t['Embarked'].fillna('S',inplace=True)
   st.table(t.isna().sum())
+
+  st.table(t.groupby(['Sex'])['PassengerId'].count())
