@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 st.title("신정우's profile")
 
@@ -35,4 +33,4 @@ with tab2:
   st.header("생존 여성과 남성의 비율")
   st.table(t.groupby(['Sex','Survived'])['PassengerId'].count())
 
-  #seaborn.barplot(x='Sex',y='Survived',data=t)
+  st.bar_chart(x='Sex',y='Survived',data=t)
