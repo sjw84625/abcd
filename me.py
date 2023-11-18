@@ -33,6 +33,4 @@ with tab2:
   st.header("생존 여성과 남성의 비율")
   st.table(t.groupby(['Sex','Survived'])['PassengerId'].count())
 
-  import matplotlib.pyplot as plt
-  import seaborn as sns
-  sns.barplot(x='Sex',y='Survived',data=t)
+  seaborn.barplot(x='Sex',y='Survived',data=t)
