@@ -46,3 +46,13 @@ with tab2:
   st.header("산점도 차트")
   st.table(t['Age'].describe())
   st.scatter_chart(x='Age',y='PassengerId',data=t)
+
+  st.header("바이올린 차트")
+  st.violin_chart(x='Survived',y='Age',data=t)
+  st.violin_chart(x='Survived',y='Age',hue='Sex',data=t)
+  st.violin_chart(x='Survived',y='Age',hue='Sex',data=t,split=True)
+
+  st.header("히트맵")
+  table=t.pivot_table(index=['Sex'],columns=['Pclass'],aggfunc='size')
+  st.heatmap(table,annot=True,fmt='d',cmap='rainbow')
+  st.table(t.corr())
